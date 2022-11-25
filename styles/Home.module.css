@@ -287,6 +287,21 @@
 
 .form > input{
   height: 50px;
+  outline: none;
+}
+
+.form > input:focus{
+  border-color: #D8AD3D;
+  outline: none;
+  border-radius: 5px 5px;
+  border-style: solid;
+}
+
+.invalid{
+  border-color: #B72C2C;
+  outline: none;
+  border-radius: 5px 5px;
+  border-style: solid;
 }
 
 .form > button{

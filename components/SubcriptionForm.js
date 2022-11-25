@@ -4,6 +4,9 @@ import styles from "../styles/Home.module.css";
 const axios = require("axios");
 
 export const SubcriptionForm = () => {
+  const [emailVal, setEmailVal] = useState(true)
+  const [phoneVal, setPhoneVal] = useState(true)
+
   const {
     formState,
     handleInputChange,
@@ -35,11 +38,13 @@ export const SubcriptionForm = () => {
       return;
     }
 
+
     //validar telefono
-    if (phone.length < 10) {
+    if (phone.length < 10 || phone.length > 20) {
       setMessage("Teléfono no válido");
       return;
     }
+
 
     setMessage("Enviando...");
     axios
@@ -60,6 +65,32 @@ export const SubcriptionForm = () => {
 
     handleReset();
   };
+
+  const handleBlur = (e) =>{
+
+    if (e.target.name === "email"){
+      if (!onlyEmail(email)) {
+        setEmailVal(false)
+        return
+      }
+      else{
+        setEmailVal(true)
+        return
+      }
+    }
+
+    if (e.target.name === "phone"){
+      if (phone.length < 10 || phone.length > 20) {
+        setPhoneVal(false)
+        return
+      }
+      else{
+        setPhoneVal(true)
+        return
+      }
+    }
+    
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -93,6 +124,8 @@ export const SubcriptionForm = () => {
           placeholder="Mail"
           value={email}
           onChange={handleInputChange}
+          onBlur={handleBlur}
+          className={`${emailVal ? "" : styles.invalid}`}
         />
         <input
           type="text"
@@ -101,10 +134,11 @@ export const SubcriptionForm = () => {
           value={phone}
           onKeyPress={onlyNumbers}
           onChange={handleInputChange}
+          onBlur={handleBlur}
+          className={`${ phoneVal ? "" : styles.invalid}`}
         />
         <div></div>
         <button>Enviar</button>
-        {/* <button onClick={handleReset}>Limpiar</button> */}
       </form>
       <p>{message}</p>
     </>
