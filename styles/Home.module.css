@@ -94,6 +94,14 @@
     height: 250px;
   }
 
+  .heroImage {
+    background-position: 65%;
+  }
+
+  .decorationImage {
+    background-position: 94% 55%;
+  }
+
 }
 
 /* ----------------------------------------------------- ARTICLES ---------------------------------------------*/
