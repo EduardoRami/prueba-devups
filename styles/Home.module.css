@@ -19,6 +19,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  
 }
 
 .decorationImage section {
@@ -87,11 +88,22 @@
 
   .socialMedia{
     display: inline-flex;
-    flex-direction: column;
+    width: 70%;
     justify-content:space-between;
-    width: 62px;
     margin-right: 30px;
-    height: 250px;
+  }
+
+  .socialMedia a{
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #009CD9;
+  }
+
+  .socialMedia a>*{
+    width: 20px;
+    height: 20px;
   }
 
   .heroImage {
@@ -102,6 +114,16 @@
     background-position: 94% 55%;
   }
 
+  .flexRowElement1{
+    flex: 0 0 40%;
+    padding-left: min(10%,230px);
+  }
+  
+  .flexRowElement2{
+    display: inline-flex;
+    justify-content: flex-start;
+    flex: 0 0 60%;
+  }
 }
 
 /* ----------------------------------------------------- ARTICLES ---------------------------------------------*/
@@ -133,6 +155,10 @@
   grid-template-columns: 270px 270px 270px 270px;
   column-gap: 30px;
   row-gap: 36px;
+}
+
+.cardContainer::after{
+  display: none;
 }
 
 .cardContainer>*{
@@ -185,6 +211,7 @@
 
 .card>h4:hover{
   color: #D8AD3D !important;
+  cursor:pointer;
 }
 
 
@@ -201,7 +228,7 @@
 .card p{
   display: inline-block;
   width: 100%;
-  height: 164px;
+  height: auto;
   margin: 0;
   padding-bottom: 10px;
   white-space: normal;
@@ -212,7 +239,7 @@
 .card h4{
   display: inline-block;
   width: 100%;
-  height: 60px;
+  height: auto;
   margin: 0;
   white-space: normal;
   overflow: hidden;
@@ -269,6 +296,10 @@
 
   .sectionTitle {
     background-position: center 45%;
+  }
+
+  .sectionTitle {
+    margin-bottom: 0px;
   }
 }
 .productImg {
