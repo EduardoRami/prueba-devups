@@ -178,6 +178,15 @@
   height: 438px;
 }
 
+.card>h4{
+  transition: 0.4s;
+}
+
+.card>h4:hover{
+  color: #D8AD3D !important;
+}
+
+
 .card img{
   border-radius: 10px 10px 0px 0px;
 }
