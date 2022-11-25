@@ -354,6 +354,12 @@
   margin-top: 100px;
 }
 
+.disabled{
+  background-color: #aaa !important;
+  cursor: auto !important;
+  pointer-events: none !important;
+}
+
 @media only screen and (max-width: 750px) {
   /* Para movil: */
 
