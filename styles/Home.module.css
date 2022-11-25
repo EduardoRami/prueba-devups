@@ -236,6 +236,10 @@
     column-gap: 30px;
     row-gap: 36px;
   }
+
+  .sectionTitle {
+    background-position: center 70%;
+  }
 }
 
 @media only screen and (max-width: 920px) {
@@ -251,6 +255,10 @@
     transform: translateX(-50%);
     width: 270px;
     
+  }
+
+  .sectionTitle {
+    background-position: center 45%;
   }
 }
 .productImg {
