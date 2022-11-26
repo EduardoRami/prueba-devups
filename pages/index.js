@@ -1,27 +1,31 @@
-import Head from 'next/head'
-import Image from "next/image"
-import styles from "../styles/Home.module.css"
-import { Hero } from '../components/Hero'
-import { Articles } from '../components/Articles'
-import { Contact } from '../components/Contact'
-
+import Head from "next/head";
+import { ArticlesMain } from "../components/ArticlesMain";
+import { ContactMain } from "../components/ContactMain";
+import { HeroImage } from "../components/HeroImage";
 
 export default function Home() {
-
   return (
     <div>
       <Head>
-        <title>El Secreto de tu Cocina</title>
-        <meta name="description" content="Consigue aquí las mejores recetas para tu paladar" />
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Open+Sans&display=swap" rel="stylesheet"/>
+        <title>El Secreto de tu cocina</title>
+        <meta
+          name="description"
+          content="Consigue aquí las mejores recetas para tu paladar"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Open+Sans&display=swap"
+        />
       </Head>
 
-      <main className="">
-        <Hero/>
-        <Articles/>
-        <Contact/>
+      <main>
+        <HeroImage />
+        <ArticlesMain />
+        <ContactMain />
+        {/* <Articles /> */}
+        {/* <Contact /> */}
       </main>
     </div>
   );

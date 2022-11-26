@@ -1,5 +1,3 @@
-/* ----------------------------------------------------- HERO ---------------------------------------------*/
-
 .mediabtn {
   width: 40px;
   height: 40px;
@@ -12,19 +10,18 @@
   padding-top: 60px;
   background-image: linear-gradient(
       0deg,
-     rgba(250, 250, 250, 1),
-     rgba(250, 250, 250, 1),
-     rgba(255, 255, 255, 0) 30%),
-      url("../public/hero.png");
+      rgba(250, 250, 250, 1),
+      rgba(250, 250, 250, 1),
+      rgba(255, 255, 255, 0) 30%
+    ),
+    url("../public/hero.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  
 }
 
 .decorationImage section {
-  max-width: clamp(250px,70%,500px);
-
+  max-width: clamp(250px, 70%, 500px);
 }
 
 .decorationImage {
@@ -37,102 +34,72 @@
   overflow-x: visible;
 }
 
-.flexRowElement1{
+.flexRowElement1 {
   flex: 0 0 60%;
-  padding-left: min(10%,230px);
+  padding-left: min(10%, 230px);
 }
 
-.flexRowElement2{
+.flexRowElement2 {
   display: inline-flex;
   justify-content: right;
   flex: 0 0 40%;
 }
 
-.flexColumnElement{
+.flexColumnElement {
   flex: 0 0 23%;
 }
 
-.flexColumnElement2{
+.flexColumnElement2 {
   flex: 0 0 38.5%;
   display: inline-flex;
   align-items: center;
 }
 
-.socialMedia{
+.socialMedia {
   display: inline-flex;
   justify-content: space-between;
   width: 216px;
   margin-right: 60px;
 }
 
-.socialMedia a{
+.socialMedia a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  border: 3px solid #009CD9;
+  border: 3px solid #009cd9;
 }
 
-.socialMedia :nth-child(2){
-  border: 3px solid #B72C2C;
+.socialMedia :nth-child(2) {
+  border: 3px solid #b72c2c;
 }
 
-.socialMedia :nth-child(3){
-  border: 3px solid #D8AD3D;
+.socialMedia :nth-child(3) {
+  border: 3px solid #d8ad3d;
 }
 
 @media only screen and (max-width: 560px) {
   /* Para movil: */
 
-  .socialMedia{
+  .socialMedia {
     display: inline-flex;
-    width: 70%;
-    justify-content:space-between;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 62px;
     margin-right: 30px;
-  }
-
-  .socialMedia a{
-    justify-content: space-around;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 3px solid #009CD9;
-  }
-
-  .socialMedia a>*{
-    width: 20px;
-    height: 20px;
-  }
-
-  .heroImage {
-    background-position: 65%;
-  }
-
-  .decorationImage {
-    background-position: 94% 55%;
-  }
-
-  .flexRowElement1{
-    flex: 0 0 40%;
-    padding-left: min(10%,230px);
-  }
-  
-  .flexRowElement2{
-    display: inline-flex;
-    justify-content: flex-start;
-    flex: 0 0 60%;
+    height: 250px;
   }
 }
 
-/* ----------------------------------------------------- ARTICLES ---------------------------------------------*/
+/* ----------------------------------------------------- MAIN ---------------------------------------------*/
 
 .sectionTitle {
   display: block;
   height: 130px;
   text-align: center;
-  background-image: url("../public/BRUSH5.jpeg");
+  background-image: url("../public/BRUSH.png");
   background-repeat: no-repeat;
   background-size: 464px 65px;
   background-position: center bottom;
@@ -140,7 +107,7 @@
   margin-top: 0px;
 }
 
-.cardContainer{
+.cardContainer {
   width: 100%;
   display: inline-grid;
   justify-content: center;
@@ -152,38 +119,34 @@
     "menu c13 c14 c15"
     "menu c16 c17 c18"
     "menu c19 c20 c21";
-  grid-template-columns: 270px 270px 270px 270px;
+  grid-template-columns: 22% 22% 22% 22%;
   column-gap: 30px;
   row-gap: 36px;
 }
 
-.cardContainer::after{
-  display: none;
-}
-
-.cardContainer>*{
-  background-color: #FFF;
+.cardContainer > * {
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.07);
 }
 
-.menu{
+.menu {
   grid-area: menu;
   min-height: 6rem;
   height: fit-content;
 }
 
-.menu > ul{
+.menu > ul {
   list-style-type: none;
   padding: 20px;
   margin: 0;
 }
 
-.menu>ul>li{ 
-  transition: background-color .5s;
+.menu > ul > li {
+  transition: background-color 0.5s;
 }
 
-.menu>ul>li>button{
+.menu > ul > li > button {
   background-color: rgba(0, 0, 0, 0);
   border-style: none;
   text-transform: uppercase;
@@ -194,41 +157,31 @@
   padding-bottom: 24px;
 }
 
-.menu>ul>li:hover{
+.menu > ul > li:hover {
   background-color: #aaa;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   height: 438px;
 }
 
-.card>h4{
-  transition: 0.4s;
-  padding-bottom: 0 !important;
-}
-
-.card>h4:hover{
-  color: #D8AD3D !important;
-  cursor:pointer;
-}
-
-
-.card img{
+.card img {
   border-radius: 10px 10px 0px 0px;
 }
 
-.card h4, .card p{
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+.card h4,
+.card p {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.card p{
+.card p {
   display: inline-block;
   width: 100%;
-  height: auto;
+  height: 134px;
   margin: 0;
   padding-bottom: 10px;
   white-space: normal;
@@ -236,10 +189,10 @@
   text-overflow: ellipsis;
 }
 
-.card h4{
+.card h4 {
   display: inline-block;
   width: 100%;
-  height: auto;
+  height: 90px;
   margin: 0;
   white-space: normal;
   overflow: hidden;
@@ -249,12 +202,12 @@
 @media only screen and (max-width: 1200px) {
   /* Para movil: */
 
-  .cardContainer{
+  .cardContainer {
     display: inline-grid;
     margin: auto;
     justify-content: center;
     position: relative;
-    left: 50%; 
+    left: 50%;
     transform: translateX(-50%);
     width: 1470px;
     grid-template-areas:
@@ -268,38 +221,25 @@
       "menu c15  c16"
       "menu c17 c18 "
       "menu c19 c20 ";
-      
-    grid-template-columns: 270px 270px 270px ;
+
+    grid-template-columns: 270px 270px 270px;
     column-gap: 30px;
     row-gap: 36px;
-  }
-
-  .sectionTitle {
-    background-position: center 70%;
   }
 }
 
 @media only screen and (max-width: 920px) {
   /* Para movil: */
 
-  .cardContainer{
+  .cardContainer {
     display: inline-flex;
     flex-direction: column;
     margin: auto;
     justify-content: center;
     position: relative;
-    left: 50%; 
+    left: 50%;
     transform: translateX(-50%);
     width: 270px;
-    
-  }
-
-  .sectionTitle {
-    background-position: center 45%;
-  }
-
-  .sectionTitle {
-    margin-bottom: 0px;
   }
 }
 .productImg {
@@ -308,10 +248,7 @@
   object-fit: cover;
 }
 
-
-/* ----------------------------------------------------- CONTACT ---------------------------------------------*/
-.footer>p{
-
+.footer > p {
   display: block;
   position: absolute;
   left: 50%;
@@ -319,50 +256,32 @@
   padding-bottom: 100px;
   color: #ff0000;
   font-weight: 600;
-
 }
 
-
-
-.form{
+.form {
   display: inline-grid;
   margin: auto;
   justify-content: center;
   position: relative;
-  left: 50%; 
+  left: 50%;
   transform: translateX(-50%);
   width: 50%;
   grid-template-areas:
     "input input"
     "input input"
     "btn1 btn2";
-  grid-template-columns: 350px 350px ;
+  grid-template-columns: 350px 350px;
   column-gap: 24px;
   row-gap: 50px;
   padding-bottom: 50px;
 }
 
-.form > input{
+.form > input {
   height: 50px;
-  outline: none;
 }
 
-.form > input:focus{
-  border-color: #D8AD3D;
-  outline: none;
-  border-radius: 5px 5px;
-  border-style: solid;
-}
-
-.invalid{
-  border-color: #B72C2C;
-  outline: none;
-  border-radius: 5px 5px;
-  border-style: solid;
-}
-
-.form > button{
-  background-color: #D8AD3D;
+.form > button {
+  background-color: #d8ad3d;
   border-style: none;
   width: 150px;
   height: 55px;
@@ -371,44 +290,32 @@
   color: white;
   font-weight: 600;
   text-transform: uppercase;
-  transition: background-color .5s;
-  justify-self:flex-end;
-  
+  transition: background-color 0.5s;
+  justify-self: flex-end;
 }
 
-.form > button:hover{
-  background-color: #009CD9;
-  
+.form > button:hover {
+  background-color: #009cd9;
 }
 
-.contactanos{
+.contactanos {
   margin-top: 100px;
 }
 
-.disabled{
-  background-color: #aaa !important;
-  cursor: auto !important;
-  pointer-events: none !important;
-}
-
 @media only screen and (max-width: 750px) {
-  /* Para movil: */
-
-  .form{
+  .form {
     display: inline-flex;
     flex-direction: column;
     margin: auto;
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 50%; 
+    left: 50%;
     transform: translateX(-50%);
     width: min(90%, 350px);
-    
   }
 
-  .form>input{
+  .form > input {
     width: min(90%, 350px);
-    
   }
 }

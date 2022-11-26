@@ -1,13 +1,11 @@
-/*global*/
 html,
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #FAFAFA;
+  background-color: white;
   overflow-x: hidden;
 }
-
 
 a {
   color: inherit;
@@ -16,46 +14,100 @@ a {
 
 *,
 *::after,
-*::before{
-    box-sizing: inherit;
+*::before {
+  box-sizing: inherit;
 }
 
-
-h1,h2,h3{
-  font-family: 'Caveat', cursive;
+h1,
+h2,
+h3 {
+  font-family: "Caveat", cursive;
   font-style: normal;
   font-weight: 700;
-  color: #24272A;
+  color: #24272a;
 }
 
-h4,h5,h6{
-  font-family: 'Open Sans', sans-serif;
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
-  color: #24272A;
+  color: #24272a;
 }
 
-p,span,ul,input,button{
-  font-family: 'Open Sans', sans-serif;
+p,
+span,
+ul,
+input,
+button {
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: #24272A;
+  color: #24272a;
 }
 
-h1{
-  font-size: clamp(60px,8vw,120px);
-  line-height: clamp(10px,100%,100px);
+h1 {
+  font-size: clamp(60px, 8vw, 120px);
+  line-height: clamp(10px, 100%, 100px);
   margin: 0;
 }
 
-h2{
-  font-size: clamp(50px,6.666vw,100px);
+h2 {
+  font-size: clamp(50px, 6.666vw, 100px);
   line-height: 0.5;
-  margin:0;
-}
-
-h3{
-  font-size: clamp(40px,5.333vw,80px);
   margin: 0;
 }
 
+h3 {
+  font-size: clamp(40px, 5.333vw, 80px);
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1270px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1270px;
+  }
+}
