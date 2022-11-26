@@ -1,0 +1,80 @@
+.nav {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 16px 0;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinkLogo {
+  padding-top: 40px;
+}
+
+.navLogo {
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navList > * + * {
+  margin-left: 30px;
+}
+
+.navLinkFacebook {
+  display: inline-flex;
+}
+
+.navLinkInstagram {
+  display: inline-flex;
+}
+
+.navLinkYoutube {
+  display: inline-flex;
+}
+
+.navListItemFacebook {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border: 3px solid #009cd9;
+  border-radius: 50%;
+}
+
+.navListItemInstagram {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border: 3px solid #b72c2c;
+  border-radius: 50%;
+}
+
+.navListItemYoutube {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border: 3px solid #d8ad3d;
+  border-radius: 50%;
+}
