@@ -4,12 +4,6 @@ import styles from "../styles/Home.module.css";
 const axios = require("axios");
 
 export const SubcriptionForm = () => {
-  const [emailVal, setEmailVal] = useState(true)
-  const [phoneVal, setPhoneVal] = useState(true)
-  const [nameVal, setNameVal] = useState(true)
-  const [lastnameVal, setLastnameVal] = useState(true)
-  const [buttonAvailable, setButtonAvailable] = useState(false)
-
   const {
     formState,
     handleInputChange,
@@ -41,13 +35,11 @@ export const SubcriptionForm = () => {
       return;
     }
 
-
     //validar telefono
-    if (phone.length < 10 || phone.length > 20) {
+    if (phone.length < 10) {
       setMessage("Teléfono no válido");
       return;
     }
-
 
     setMessage("Enviando...");
     axios
@@ -69,65 +61,6 @@ export const SubcriptionForm = () => {
     handleReset();
   };
 
-  const handleChange=(e)=>{
-    handleInputChange(e)
-    if (phone.length > 10 &&  phone.length < 20 && onlyEmail(email) && lastname.length>0 && firstname.length>0){
-      setButtonAvailable(true)
-    }
-    else{
-      setButtonAvailable(false)
-    }
-  }
-
-  const handleBlur = (e) =>{
-
-    if (e.target.name === "firstname"){
-      if (firstname.length<1) {
-        setNameVal(false)
-        return
-      }
-      else{
-        setNameVal(true)
-        return
-      }
-    }
-
-    if (e.target.name === "lastname"){
-      if (lastname.length<1) {
-        setLastnameVal(false)
-        return
-      }
-      else{
-        setLastnameVal(true)
-        return
-      }
-    }
-
-    if (e.target.name === "email"){
-      if (!onlyEmail(email)) {
-        setEmailVal(false)
-        return
-      }
-      else{
-        setEmailVal(true)
-        return
-      }
-    }
-
-    if (e.target.name === "phone"){
-      if (phone.length < 10 || phone.length > 20) {
-        setPhoneVal(false)
-        return
-      }
-      else{
-        setPhoneVal(true)
-        return
-      }
-    }
-
-    
-  }
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setMessage("");
@@ -144,9 +77,7 @@ export const SubcriptionForm = () => {
           placeholder="Nombre"
           value={firstname}
           onKeyPress={onlyLetters}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          className={`${nameVal ? "" : styles.invalid}`}
+          onChange={handleInputChange}
         />
         <input
           type="text"
@@ -154,18 +85,14 @@ export const SubcriptionForm = () => {
           placeholder="Apellido"
           value={lastname}
           onKeyPress={onlyLetters}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          className={`${lastnameVal ? "" : styles.invalid}`}
+          onChange={handleInputChange}
         />
         <input
           type="mail"
           name="email"
           placeholder="Mail"
           value={email}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          className={`${emailVal ? "" : styles.invalid}`}
+          onChange={handleInputChange}
         />
         <input
           type="text"
@@ -173,12 +100,11 @@ export const SubcriptionForm = () => {
           placeholder="Telefono"
           value={phone}
           onKeyPress={onlyNumbers}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          className={`${ phoneVal ? "" : styles.invalid}`}
+          onChange={handleInputChange}
         />
         <div></div>
-        <button className={`${ buttonAvailable ? "" : styles.disabled}`}>Enviar</button>
+        <button>Enviar</button>
+        {/* <button onClick={handleReset}>Limpiar</button> */}
       </form>
       <p>{message}</p>
     </>
